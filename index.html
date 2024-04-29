@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <main>
+        <section class="izq">
+            <div class="logo_alura">
+                <h1>
+                    <img src="imagenes/Logo.png">
+                </h1>
+            </div>
+            <div class="encriptar">
+                <textarea id="texto-encriptar" class="texto-encriptado" name="texto" oninput="validarTexto()" placeholder="Ingrese el texto aqui" autofocus=""></textarea>
+            </div>
+
+            <div class="aviso">          
+                <p> <img src="imagenes/Group.png" alt="Imagen aviso" class="img-aviso">
+                 Solo letras minusculas y sin acentos</p>
+            </div>
+
+            <div class="bo">
+                <button class="boton-encriptar" onclick="encriptar();">Encriptar</button>
+                <button class="boton-desencriptar" onclick="desencriptar();">Desencriptar</button>
+            </div>
+        </section>
+        <section class="der">
+            <div>
+                <textarea name="texto-encriptado" class="resultado" id="texto-encriptado" cols="30" rows="10" hidden="" readonly=""></textarea>
+            </div>
+            <div class="imagen-mensaje" id="imagen-mensaje">
+                <img src="imagenes/Muñeco.png" alt="persona con lupa">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <h3>Ingresa el texto que desees encriptar o desencriptar.</h3>
+            </div>
+            <div>
+                <button class="boton-copiar" id="boton-copiar" onclick="copiarTexto();" hidden="">Copiar</button>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <h4>by Rolo</h4>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
